@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-container {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.hero-container header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-container.active {
+    right: 300px;
+}
+
+.logo {
+    /* text-transform: uppercase; */
+    cursor: pointer;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(./images/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url(./images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.hero-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -10;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(147, 157, 165, 1);
+    mix-blend-mode: overlay;
+}
+
+.header-text h2 {
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.header-text p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.header-text a {
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.header-text a:hover {
+    letter-spacing: 4px;
+}
+
+.header-text {
+    position: relative;
+    height: 100vh;
+    z-index: 10;
+}
+
+.technologies-section {
+    background: rgb(65, 65, 65);
+    color: rgb(191, 191, 191);
+    z-index: 10;
+    position: sticky;
+    top: auto;
+    width: 100vw;
+}
+
+.technologies-section h2 {
+    padding: 25px 0px 0px 25px;
+}
+
+.technologies-section ul {
+    padding: 25px 0px 25px 25px;
+    list-style: none;
+}
+
+.projects-section {
+    background: rgb(225, 225, 225);
+    color: rgb(191, 191, 191);
+    z-index: 10;
+    position: sticky;
+    top: auto;
+    width: 100vw;
+}
+
+.projects-section h3 {
+    padding: 25px 25px;
+}
+
+.projects-section ul {
+    padding: 25px 25px;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.projects-section ul a {
+    color: rgb(191, 191, 191);
+    ;
+    text-decoration-line: none;
+}
+
+/**Contact form styling */
+.contact h3 {
+    margin: 40px;
+
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+}
+
+.contact form label {
+    display: block;
+}
+
+.contact form p {
+    margin: 0;
+}
+
+.contact form .full {
+    grid-column: 1;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+    width: 75vw;
+    max-width: 540px;
+    padding: 1em;
+}
+
+.contact form button {
+    background: rgba(147, 157, 165, 1);
+    border: 0px;
+    text-transform: uppercase;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+    background: rgba(215, 229, 242, 1);
+    color: rgba(89, 49, 57, 1);
+    outline: 0;
+    transition: background-color .5s ease-out;
+    transition: text-color .5 ease-out;
+}
+
+.description-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85vw;
+}
+
+.footer-container>* {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #bdb9af;
+}
+
+.description {
+    padding-bottom: 10px;
+}
+
+.alert {
+    text-align: center;
+    padding: 10px;
+    background: #80c880;
+    color: #fff;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.fancy-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: rgba(215, 229, 242, 1);
+}
+
+.fancy-menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.fancy-menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+}
+
+.fancy-menu ul li a:hover {
+    color: rgba(89, 49, 57, 1);
+}
+
+.fancy-menu .social {
+    display: flex;
+    flex-direction: column;
+}
+
+.fancy-menu .social a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #111;
+}
+
+.fancy-menu .social a:hover {
+    color: rgba(89, 49, 57, 1);
+}
+
+/* todo social linkedin and github links */
+
+@media (max-width: 768px) {
+
+    .hero-container,
+    .hero-container header {
+        position: relative;
+        justify-content: space-between;
+        padding: 25px 10px;
+    }
+
+    .header-text h2 {
+        font-size: 3em;
+    }
+
+    .header-text h3 {
+        font-size: 2em;
+    }
+
+}
+
+/* Color Theme Swatches in Hex */
+.Moonlight-1-hex {
+    color: #593239;
+}
+
+.Moonlight-2-hex {
+    color: #733863;
+}
+
+.Moonlight-3-hex {
+    color: #D8E6F2;
+}
+
+.Moonlight-4-hex {
+    color: #AAB5BF;
+}
+
+.Moonlight-5-hex {
+    color: #949DA6;
+}
+
+/* Color Theme Swatches in RGBA */
+.Moonlight-1-rgba {
+    color: rgba(89, 49, 57, 1);
+}
+
+.Moonlight-2-rgba {
+    color: rgba(114, 56, 99, 1);
+}
+
+.Moonlight-3-rgba {
+    color: rgba(215, 229, 242, 1);
+}
+
+.Moonlight-4-rgba {
+    color: rgba(170, 181, 191, 1);
+}
+
+.Moonlight-5-rgba {
+    color: rgba(147, 157, 165, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.Moonlight-1-hsla {
+    color: hsla(348, 28, 27, 1);
+}
+
+.Moonlight-2-hsla {
+    color: hsla(315, 34, 33, 1);
+}
+
+.Moonlight-3-hsla {
+    color: hsla(208, 51, 89, 1);
+}
+
+.Moonlight-4-hsla {
+    color: hsla(208, 14, 70, 1);
+}
+
+.Moonlight-5-hsla {
+    color: hsla(208, 9, 61, 1);
+}
